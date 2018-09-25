@@ -113,8 +113,5 @@
     "tslint-config-standard": "^7.1.0",
     "typedoc": "^0.11.0",
     "typescript": "^2.9.2"
-  },
-  "dependencies": {
-    "double-array-trie-js-bind": "file:rust/pkg"
   }
 }

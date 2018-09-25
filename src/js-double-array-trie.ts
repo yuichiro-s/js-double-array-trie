@@ -1,4 +1,4 @@
-import { StaticTrieInt32 } from 'double-array-trie-js-bind'
+import { StaticTrieInt32 } from './double_array_trie_js_bind'
 import { TextEncoder } from 'util'
 
 let encoder = new TextEncoder()
