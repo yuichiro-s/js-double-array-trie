@@ -37,5 +37,6 @@ trie.prefixSearch("a");             // -> []
 let data = trie.serialize(true);
 
 // deserialization with snappy decompression
-let trie = Trie.deserialize(data, true);
+let trie2 = Trie.deserialize(data, true);
+trie2.prefixSearch("abracadabra");  // -> [{ value: 500, length: 2 }, { value: 300, length: 4 }]
 ```
