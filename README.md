@@ -35,9 +35,9 @@ trie.get("abracadabra");   // -> undefined
 trie.get("a");             // -> undefined
 
 // prefix search
-createTrie().prefixSearch("abracadabra");   // -> [{ value: 500, length: 2 }, { value: 300, length: 4 }]
-createTrie().prefixSearch("abba");          // -> [{ value: 500, length: 2 }]
-createTrie().prefixSearch("a");             // -> []
+trie.prefixSearch("abracadabra");   // -> [{ value: 500, length: 2 }, { value: 300, length: 4 }]
+trie.prefixSearch("abba");          // -> [{ value: 500, length: 2 }]
+trie.prefixSearch("a");             // -> []
 
 // serialization with snappy compression
 let data = trie.serialize(true);
