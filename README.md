@@ -1,24 +1,18 @@
 # js-double-array-trie
-
 An implementation of static trie using double array.
 Currently, only string keys and int32 values are supported.
 
 ## Install
-
-Go to `js-double-array-trie`, then
 ```
 npm install
 ```
 
 ## Test
-
-Go to `js-double-array-trie`, then
 ```
 npm test
 ```
 
 ## Usage
-
 See `js-double-array-trie/test/js-double-array-trie.test.ts`
 
 ```ts
