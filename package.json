@@ -48,9 +48,6 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "transformIgnorePatterns": [
-      "<rootDir>/../rust/pkg/"
-    ],
     "testEnvironment": "node",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "moduleFileExtensions": [
@@ -60,7 +57,8 @@
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "/test/"
+      "/test/",
+      "/src/double_array_trie_js_bind*"
     ],
     "coverageThreshold": {
       "global": {
