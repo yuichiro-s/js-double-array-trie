@@ -13,7 +13,7 @@ npm test
 ```
 
 ## Usage
-See `js-double-array-trie/test/js-double-array-trie.test.ts`
+See `test/js-double-array-trie.test.ts`
 
 ```ts
 import Trie from "js-double-array-trie"
@@ -33,7 +33,7 @@ trie.prefixSearch("abracadabra");   // -> [{ value: 500, length: 2 }, { value: 3
 trie.prefixSearch("abba");          // -> [{ value: 500, length: 2 }]
 trie.prefixSearch("a");             // -> []
 
-// serialization with snappy compression
+// serialization with snappy compression (returns Uint8Array)
 let data = trie.serialize(true);
 
 // deserialization with snappy decompression
