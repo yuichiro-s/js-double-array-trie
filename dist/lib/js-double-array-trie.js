@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var double_array_trie_js_bind_1 = require("./double_array_trie_js_bind");
-var util_1 = require("util");
-var encoder = new util_1.TextEncoder();
+var text_encoding_1 = require("text-encoding");
+var encoder = new text_encoding_1.TextEncoder();
 function encode(key) {
     return encoder.encode(key);
 }

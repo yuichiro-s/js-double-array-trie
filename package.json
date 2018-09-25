@@ -100,10 +100,12 @@
     "rollup": "^0.59.2",
     "rollup-plugin-commonjs": "^9.1.8",
     "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.13.0",
     "semantic-release": "^15.9.16",
+    "text-encoding": "^0.6.4",
     "ts-jest": "^22.0.0",
     "ts-node": "^6.2.0",
     "tslint": "^5.11.0",
@@ -111,5 +113,8 @@
     "tslint-config-standard": "^7.1.0",
     "typedoc": "^0.11.0",
     "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@types/text-encoding": "0.0.33"
   }
 }

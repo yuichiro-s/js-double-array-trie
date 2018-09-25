@@ -1,5 +1,5 @@
 import { StaticTrieInt32 } from './double_array_trie_js_bind'
-import { TextEncoder } from 'util'
+import { TextEncoder } from 'text-encoding'
 
 let encoder = new TextEncoder()
 
