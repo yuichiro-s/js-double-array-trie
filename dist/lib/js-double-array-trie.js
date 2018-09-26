@@ -3,8 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var double_array_trie_js_bind_1 = require("./double_array_trie_js_bind");
 var text_encoding_1 = require("text-encoding");
 var encoder = new text_encoding_1.TextEncoder();
-function encode(key) {
-    return encoder.encode(key);
+var decoder = new text_encoding_1.TextDecoder();
+function encode(str) {
+    return encoder.encode(str);
+}
+function decode(bytes) {
+    return decoder.decode(bytes);
 }
 var Trie = /** @class */ (function () {
     function Trie(trie) {
@@ -46,9 +50,11 @@ var Trie = /** @class */ (function () {
         var entryNum = flattenedResult.length / 2;
         var result = [];
         for (var i = 0; i < entryNum; i++) {
+            var bytesNum = flattenedResult[i * 2 + 1];
+            var match = decode(encoded.subarray(0, bytesNum));
             result.push({
                 value: flattenedResult[i * 2],
-                length: flattenedResult[i * 2 + 1]
+                match: match,
             });
         }
         return result;

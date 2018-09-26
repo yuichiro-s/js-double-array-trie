@@ -1,10 +1,15 @@
 import { StaticTrieInt32 } from './double_array_trie_js_bind'
-import { TextEncoder } from 'text-encoding'
+import { TextEncoder, TextDecoder } from 'text-encoding'
 
 let encoder = new TextEncoder()
+let decoder = new TextDecoder()
 
-function encode(key: string): Uint8Array {
-  return encoder.encode(key)
+function encode(str: string): Uint8Array {
+  return encoder.encode(str)
+}
+
+function decode(bytes: Uint8Array): string {
+  return decoder.decode(bytes)
 }
 
 export default class Trie {
@@ -47,15 +52,17 @@ export default class Trie {
     return this.trie.get(encoded)
   }
 
-  prefixSearch(key: string): { value: number; length: number }[] {
+  prefixSearch(key: string): { value: number; match: string }[] {
     let encoded = encode(key)
     let flattenedResult = this.trie.prefix_search(encoded)
     let entryNum = flattenedResult.length / 2
     let result = []
     for (let i = 0; i < entryNum; i++) {
+      let bytesNum = flattenedResult[i * 2 + 1];
+      let match = decode(encoded.subarray(0, bytesNum));
       result.push({
         value: flattenedResult[i * 2],
-        length: flattenedResult[i * 2 + 1]
+        match: match,
       })
     }
     return result

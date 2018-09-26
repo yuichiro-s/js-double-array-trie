@@ -7,7 +7,7 @@ export default class Trie {
     get(key: string): number;
     prefixSearch(key: string): {
         value: number;
-        length: number;
+        match: string;
     }[];
     size(): number;
     serialize(compress: boolean): Uint8Array;

@@ -78,6 +78,7 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
+    "@types/text-encoding": "0.0.33",
     "text-encoding": "^0.6.4"
   }
 }
